@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h1>用户页面，需要USER权限</h1>
+<p>已经成功登陆，你的用户名是：</p>
+<p th:text="${username}" style="margin-top: 25px; color: crimson">wxb</p>
+<form th:action="@{/logout}" method="post">
+    <button class="btn btn-danger" style="margin-top: 20px">退出登录</button>
+</form>
+<a href="/index">主页</a>
+<a href="/user">用户页面</a>
+<a href="/admin">管理员页面</a>
+<a href="/login">登录页面</a>
+</body>
+</html>
